@@ -3,210 +3,98 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Kopi Senja – Kafe di Bandung</title>
+<title>Webjuragan – Jasa Bikin Website untuk Usaha</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#EEF1EA;--ink:#16302A;--muted:#566860;--card:#fff;--line:#D3DBD0;--board:#16302A;--boardtext:#F1EFE4;--gold:#E7A524;--goldink:#16302A;
-color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1916;--ink:#E8EEE7;--muted:#9AAFA5;--card:#17251F;--line:#29393A;--board:#0A1210;--boardtext:#F1EFE4;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0F1916;--ink:#E8EEE7;--muted:#9AAFA5;--card:#17251F;--line:#29393A;--board:#0A1210;--boardtext:#F1EFE4;color-scheme:dark}
+:root{--bg:#EEF1EA;--ink:#16302A;--muted:#566860;--card:#FFFFFF;--line:#D3DBD0;--board:#16302A;--boardtext:#F6F3EC;--ac:#E7A524;--acink:#16302A;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#091311;--ink:#EDEDED;--muted:#A5ADAD;--card:#243c37;--line:#3b514c;--board:#0c1a17;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#091311;--ink:#EDEDED;--muted:#A5ADAD;--card:#243c37;--line:#3b514c;--board:#0c1a17;color-scheme:dark}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
 h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.1;margin:0}
 h2{font-size:clamp(26px,6vw,36px);margin-bottom:6px}
-p{margin:0}
-a{color:inherit}
+p{margin:0}a{color:inherit}
 .wrap{max-width:960px;margin:0 auto;padding:0 20px}
 section{padding:44px 0}
 .sub{color:var(--muted);margin-bottom:22px;max-width:52ch}
 .btn{display:inline-block;padding:13px 20px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent}
-.btn-wa{background:var(--gold);color:var(--goldink)}
+.btn-wa{background:var(--ac);color:var(--acink)}
 .btn-ghost{border-color:currentColor}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-
+:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+.back{background:var(--board);color:var(--boardtext);font-size:14px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.back a{text-decoration:none;opacity:.85}
 .hero{background:var(--board);color:var(--boardtext);padding:36px 0 40px}
 .hero .wrap{display:grid;gap:28px}
 .hero h1{font-size:clamp(44px,13vw,84px);font-weight:800}
 .hero .tag{margin:12px 0 22px;max-width:34ch;opacity:.85}
 .cta{display:flex;flex-wrap:wrap;gap:10px}
-.board{border:2px dashed rgba(241,239,228,.35);border-radius:10px;padding:18px 18px 8px}
+.board{border:2px dashed rgba(246,243,236,.35);border-radius:10px;padding:18px 18px 8px}
 .board h3{font-size:20px;margin-bottom:12px}
-.board li{display:flex;align-items:baseline;gap:8px;padding:7px 0}
 .board ul{list-style:none;margin:0;padding:0}
-.board .dots{flex:1;border-bottom:2px dotted rgba(241,239,228,.35);transform:translateY(-4px)}
-.board b{color:var(--gold)}
+.board li{display:flex;align-items:baseline;gap:8px;padding:7px 0}
+.board .dots{flex:1;border-bottom:2px dotted rgba(246,243,236,.35);transform:translateY(-4px)}
+.board b{color:var(--ac)}
 @media(min-width:760px){.hero .wrap{grid-template-columns:1.2fr 1fr;align-items:center}}
-
-.info{display:grid;gap:12px;margin-top:-1px;background:var(--gold);color:var(--goldink);padding:14px 20px;font-weight:500;text-align:center}
-
+.info{display:grid;gap:12px;background:var(--ac);color:var(--acink);padding:14px 20px;font-weight:500;text-align:center}
 .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
 .item{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.ph{aspect-ratio:4/3;display:grid;place-items:center;font-size:44px;background:linear-gradient(135deg,#C9D8C5,#E9D9A8);color:#16302A}
-.item .t{padding:12px 14px 14px}
-.item h3{font-size:18px}
+.ph{aspect-ratio:4/3;display:grid;place-items:center;font-size:44px;background:linear-gradient(135deg,var(--line),var(--ac));color:#222}
+.item .t{padding:12px 14px 14px}.item h3{font-size:18px}
 .price{font-weight:700;margin-top:4px}
-.badge{display:inline-block;font-size:12px;font-weight:700;background:var(--gold);color:var(--goldink);border-radius:6px;padding:1px 8px;margin-bottom:6px}
-
+.badge{display:inline-block;font-size:12px;font-weight:700;background:var(--ac);color:var(--acink);border-radius:6px;padding:1px 8px;margin-bottom:6px}
 .tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;margin-bottom:10px}
 .tabs button{flex:none;font:inherit;font-weight:700;padding:9px 16px;border-radius:999px;border:2px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
 .tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .menu{list-style:none;margin:0;padding:0}
 .menu li{display:flex;align-items:baseline;gap:8px;padding:11px 0;border-bottom:1px solid var(--line)}
-.menu .n{flex:1}
-.menu small{display:block;color:var(--muted)}
-
-.gal{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
-.gal .ph{aspect-ratio:1;font-size:13px;text-align:center;padding:8px}
-.fas{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.menu .n{flex:1}.menu small{display:block;color:var(--muted)}
+.fas{display:flex;flex-wrap:wrap;gap:8px}
 .fas span{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 14px;font-size:14px}
-@media(min-width:760px){.gal{grid-template-columns:repeat(4,1fr)}}
-
 .steps{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-.steps div,.quote{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.steps div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
 .steps h3{font-size:18px;margin-bottom:4px}
-.quote p{margin-bottom:8px}
-.quote span{color:var(--muted);font-size:14px}
-
-.map{aspect-ratio:16/9;border-radius:14px;border:1px dashed var(--muted);display:grid;place-items:center;color:var(--muted);text-align:center;padding:12px}
 .loc{display:grid;gap:18px}
 @media(min-width:760px){.loc{grid-template-columns:1fr 1fr}}
 .jam{list-style:none;margin:10px 0 0;padding:0}
 .jam li{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line)}
-
+.map{aspect-ratio:16/9;border-radius:14px;border:1px dashed var(--muted);display:grid;place-items:center;color:var(--muted);text-align:center;padding:12px}
 details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:8px}
-summary{font-weight:700;cursor:pointer}
-details p{margin-top:8px;color:var(--muted)}
-
+summary{font-weight:700;cursor:pointer}details p{margin-top:8px;color:var(--muted)}
 footer{background:var(--board);color:var(--boardtext);padding:30px 0 90px;text-align:center}
 footer a{margin:0 8px}
 .fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:5}
+
+.toc{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.toc a{display:flex;align-items:center;gap:14px;padding:14px 4px;border-bottom:1px solid var(--line);text-decoration:none}
+.toc .no{flex:none;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-weight:700}
+.toc .tn{flex:1;font-weight:700}.toc small{display:block;font-weight:400;color:var(--muted)}
+.toc .go{color:var(--muted)}
+.toc2{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.toc2 a{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 14px;font-size:14px;text-decoration:none}
+a.card{text-decoration:none;display:block}
 </style>
 </head>
 <body>
-
-<header class="hero">
- <div class="wrap">
-  <div>
-   <h1>Kopi Senja</h1>
-   <p class="tag">Kopi enak, tempat nyaman, buka sampai malam. Di jantung kota Bandung.</p>
-   <div class="cta">
-    <a class="btn btn-wa" href="https://wa.me/6285117324291?text=Halo%20Kopi%20Senja%2C%20saya%20mau%20pesan" target="_blank" rel="noopener">Pesan via WhatsApp</a>
-    <a class="btn btn-ghost" href="#menu">Lihat menu</a>
-   </div>
-  </div>
-  <div class="board" aria-label="Menu andalan hari ini">
-   <h3>Andalan hari ini</h3>
-   <ul>
-    <li><span>Kopi Susu Senja</span><i class="dots"></i><b>Rp22.000</b></li>
-    <li><span>Es Kopi Aren</span><i class="dots"></i><b>Rp24.000</b></li>
-    <li><span>Nasi Ayam Sambal Matah</span><i class="dots"></i><b>Rp32.000</b></li>
-    <li><span>Roti Bakar Cokelat Keju</span><i class="dots"></i><b>Rp20.000</b></li>
-   </ul>
-  </div>
- </div>
-</header>
-<div class="info"><span>Buka setiap hari, 10.00–23.00</span><span>Jl. Contoh No. 12, Bandung (ganti dengan alamat asli)</span></div>
-
-<section id="andalan"><div class="wrap">
- <h2>Menu terlaris</h2>
- <p class="sub">Yang paling sering dipesan pelanggan kami.</p>
- <div class="grid">
-  <article class="item"><div class="ph" role="img" aria-label="Foto menu, ganti dengan foto asli">☕</div><div class="t"><span class="badge">Best seller</span><h3>Kopi Susu Senja</h3><p class="price">Rp22.000</p></div></article>
-  <article class="item"><div class="ph" role="img" aria-label="Foto menu, ganti dengan foto asli">🧋</div><div class="t"><span class="badge">Best seller</span><h3>Es Kopi Aren</h3><p class="price">Rp24.000</p></div></article>
-  <article class="item"><div class="ph" role="img" aria-label="Foto menu, ganti dengan foto asli">🍛</div><div class="t"><h3>Nasi Ayam Sambal Matah</h3><p class="price">Rp32.000</p></div></article>
-  <article class="item"><div class="ph" role="img" aria-label="Foto menu, ganti dengan foto asli">🍞</div><div class="t"><h3>Roti Bakar Cokelat Keju</h3><p class="price">Rp20.000</p></div></article>
- </div>
-</div></section>
-
-<section id="menu" style="background:var(--card)"><div class="wrap">
- <h2>Menu lengkap</h2>
- <p class="sub">Harga sudah termasuk pajak.</p>
- <div class="tabs" role="tablist" id="tabs"></div>
- <ul class="menu" id="list" role="tabpanel"></ul>
-</div></section>
-
-<section id="suasana"><div class="wrap">
- <h2>Suasana</h2>
- <p class="sub">Tempat yang enak buat kerja, ngobrol, atau sekadar duduk lama.</p>
- <div class="gal">
-  <div class="ph">Foto interior</div><div class="ph">Area outdoor</div><div class="ph">Meja kerja</div><div class="ph">Bar kopi</div>
- </div>
- <div class="fas"><span>WiFi cepat</span><span>Banyak colokan</span><span>Parkir luas</span><span>Area non-merokok</span><span>Musala</span></div>
-</div></section>
-
-<section style="background:var(--card)"><div class="wrap">
- <h2>Cara pesan</h2>
- <p class="sub">Pilih yang paling gampang buat kamu.</p>
- <div class="steps">
-  <div><h3>Makan di tempat</h3><p>Datang, pilih meja, pesan di kasir.</p></div>
-  <div><h3>Bawa pulang</h3><p>Chat WhatsApp, pesanan siap saat kamu tiba.</p></div>
-  <div><h3>Antar</h3><p>Lewat GoFood, GrabFood, atau ShopeeFood.</p></div>
- </div>
- <p class="sub" style="margin-top:22px">Mau reservasi untuk ulang tahun, meeting, atau acara kecil? Kirim tanggal dan jumlah orang.</p>
- <a class="btn btn-wa" href="https://wa.me/6285117324291?text=Halo%2C%20saya%20mau%20reservasi" target="_blank" rel="noopener">Reservasi via WhatsApp</a>
-</div></section>
-
-<section><div class="wrap">
- <h2>Kata pelanggan</h2>
- <p class="sub">Ganti dengan ulasan asli. Kosongkan bagian ini kalau belum ada.</p>
- <div class="grid">
-  <div class="quote"><p>“Tempatnya adem, kopinya konsisten enak. Sering kerja di sini sampai malam.”</p><span>Contoh pelanggan A</span></div>
-  <div class="quote"><p>“Porsi nasinya pas, sambalnya juara. Harganya masuk akal.”</p><span>Contoh pelanggan B</span></div>
- </div>
-</div></section>
-
-<section id="lokasi" style="background:var(--card)"><div class="wrap loc">
- <div>
-  <h2>Lokasi dan jam buka</h2>
-  <p class="sub" style="margin-bottom:6px">Jl. Contoh No. 12, Bandung. Dekat Alun-alun, sebelah toko buku.</p>
-  <ul class="jam"><li><span>Senin–Jumat</span><b>10.00–23.00</b></li><li><span>Sabtu–Minggu</span><b>09.00–24.00</b></li></ul>
- </div>
- <div class="map">Tempel embed Google Maps di sini</div>
-</div></section>
-
-<section><div class="wrap">
- <h2>Pertanyaan umum</h2>
- <p class="sub"></p>
- <details><summary>Apakah makanannya halal?</summary><p>Ya, semua menu menggunakan bahan halal.</p></details>
- <details><summary>Ada parkir?</summary><p>Ada, muat sekitar 10 mobil dan banyak motor.</p></details>
- <details><summary>Bisa reservasi?</summary><p>Bisa lewat WhatsApp. Sebutkan tanggal, jam, dan jumlah orang.</p></details>
- <details><summary>Minimal order untuk antar?</summary><p>Minimal Rp50.000 untuk area sekitar kafe.</p></details>
-</div></section>
-
-<footer>
- <div class="wrap">
-  <h2 style="font-size:26px">Kopi Senja</h2>
-  <p style="margin:8px 0 14px;opacity:.8">Jl. Contoh No. 12, Bandung</p>
-  <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-  <a href="https://wa.me/6285117324291" target="_blank" rel="noopener">WhatsApp</a>
- </div>
-</footer>
-<a class="btn btn-wa fab" href="https://wa.me/6285117324291?text=Halo%20Kopi%20Senja" target="_blank" rel="noopener">Chat WhatsApp</a>
-
-<script>
-// GANTI NOMOR WHATSAPP DI SINI (format 628xxxxxxxxxx, tanpa + dan tanpa 0 di depan)
-var WA="6285117324291";
-document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(a){
- a.href=a.href.replace(/wa\.me\/[^?]*/,"wa.me/"+WA);
-});
-
-var M={
-"Kopi":[["Kopi Susu Senja","Espresso, susu segar","22.000"],["Es Kopi Aren","Gula aren asli","24.000"],["Americano","","18.000"],["Latte","","25.000"]],
-"Non-kopi":[["Matcha Latte","","26.000"],["Cokelat Panas","","24.000"],["Teh Lemon","","16.000"]],
-"Makanan":[["Nasi Ayam Sambal Matah","","32.000"],["Mie Goreng Spesial","","28.000"],["Sandwich Telur","","26.000"]],
-"Camilan":[["Roti Bakar Cokelat Keju","","20.000"],["Kentang Goreng","","18.000"],["Pisang Goreng","","15.000"]]
-};
-var tabs=document.getElementById("tabs"),list=document.getElementById("list");
-function show(k){
- Array.prototype.forEach.call(tabs.children,function(b){b.setAttribute("aria-selected",b.textContent===k)});
- list.innerHTML=M[k].map(function(r){return '<li><div class="n">'+r[0]+(r[1]?'<small>'+r[1]+'</small>':'')+'</div><b>Rp'+r[2]+'</b></li>'}).join("");
-}
-Object.keys(M).forEach(function(k,i){
- var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.textContent=k;
- b.onclick=function(){show(k)};tabs.appendChild(b);if(i===0)show(k);
-});
-</script>
+<header class="hero"><div class="wrap">
+ <div><h1>Webjuragan</h1><p class="tag">Jasa bikin website untuk usaha kecil. Rapi, enak dibuka di HP, dan pesanan masuk lewat WhatsApp.</p>
+ <div class="cta"><a class="btn btn-wa" href="https://wa.me/6285117324291?text=Halo%20Webjuragan,%20saya%20mau%20tanya%20soal%20bikin%20website" target="_blank" rel="noopener">Chat via WhatsApp</a><a class="btn btn-ghost" href="#contoh">Lihat contoh</a></div></div>
+ <div class="board" aria-label="Isi halaman"><h3>Daftar isi</h3><ul>
+  <li><span><a href="#contoh">Contoh website</a></span><i class="dots"></i><b>1</b></li>
+  <li><span><a href="#cara">Cara kerja</a></span><i class="dots"></i><b>2</b></li>
+  <li><span><a href="#hubungi">Hubungi kami</a></span><i class="dots"></i><b>3</b></li></ul></div>
+</div></header>
+<section id="contoh"><div class="wrap"><h2>Contoh website</h2><p class="sub">Ketuk salah satu untuk melihat hasilnya. Semua bisa disesuaikan dengan usahamu.</p>
+ <ol class="toc"><li><a href="kopi-senja.html"><span class="no">1</span><span class="tn">Kopi Senja<small>Kafe</small></span><span class="go">→</span></a></li><li><a href="barbershop.html"><span class="no">2</span><span class="tn">Pangkas Rapi<small>Barbershop</small></span><span class="go">→</span></a></li><li><a href="laundry.html"><span class="no">3</span><span class="tn">Bersih Wangi<small>Laundry</small></span><span class="go">→</span></a></li><li><a href="toko-kue.html"><span class="no">4</span><span class="tn">Manis Rasa<small>Toko kue</small></span><span class="go">→</span></a></li><li><a href="bengkel.html"><span class="no">5</span><span class="tn">Sigap Motor<small>Bengkel motor</small></span><span class="go">→</span></a></li><li><a href="toko-bunga.html"><span class="no">6</span><span class="tn">Bunga Kita<small>Toko bunga</small></span><span class="go">→</span></a></li><li><a href="warung-makan.html"><span class="no">7</span><span class="tn">Warung Bu Sari<small>Rumah makan</small></span><span class="go">→</span></a></li><li><a href="salon.html"><span class="no">8</span><span class="tn">Cantik Kita<small>Salon</small></span><span class="go">→</span></a></li><li><a href="studio-foto.html"><span class="no">9</span><span class="tn">Lensa Kita<small>Studio foto</small></span><span class="go">→</span></a></li><li><a href="gym.html"><span class="no">10</span><span class="tn">Kuat Fit<small>Gym dan yoga</small></span><span class="go">→</span></a></li><li><a href="kos.html"><span class="no">11</span><span class="tn">Kos Nyaman<small>Kos-kosan</small></span><span class="go">→</span></a></li><li><a href="katering.html"><span class="no">12</span><span class="tn">Dapur Hangat<small>Katering</small></span><span class="go">→</span></a></li><li><a href="wedding-foto.html"><span class="no">13</span><span class="tn">Momen Abadi<small>Fotografer wedding</small></span><span class="go">→</span></a></li><li><a href="servis-ac.html"><span class="no">14</span><span class="tn">Dingin Jaya<small>Servis AC</small></span><span class="go">→</span></a></li><li><a href="pindahan.html"><span class="no">15</span><span class="tn">Pindah Mudah<small>Jasa pindahan</small></span><span class="go">→</span></a></li><li><a href="toko-bangunan.html"><span class="no">16</span><span class="tn">Bangun Jaya<small>Toko bangunan</small></span><span class="go">→</span></a></li><li><a href="percetakan.html"><span class="no">17</span><span class="tn">Cetak Cepat<small>Percetakan</small></span><span class="go">→</span></a></li><li><a href="toko-kelontong.html"><span class="no">18</span><span class="tn">Toko Berkah<small>Toko kelontong</small></span><span class="go">→</span></a></li><li><a href="homestay.html"><span class="no">19</span><span class="tn">Rumah Singgah<small>Homestay</small></span><span class="go">→</span></a></li><li><a href="cuci-mobil.html"><span class="no">20</span><span class="tn">Kilap Auto<small>Cuci mobil</small></span><span class="go">→</span></a></li><li><a href="toko-hijab.html"><span class="no">21</span><span class="tn">Hijab Anggun<small>Toko hijab</small></span><span class="go">→</span></a></li><li><a href="toko-ponsel.html"><span class="no">22</span><span class="tn">Sinyal Prima<small>Toko ponsel dan servis HP</small></span><span class="go">→</span></a></li><li><a href="kursus-mengemudi.html"><span class="no">23</span><span class="tn">Aman Jalan<small>Kursus mengemudi</small></span><span class="go">→</span></a></li><li><a href="kedai-bakso.html"><span class="no">24</span><span class="tn">Bakso Mantap<small>Kedai bakso</small></span><span class="go">→</span></a></li><li><a href="desain-interior.html"><span class="no">25</span><span class="tn">Ruang Rapi<small>Desain interior</small></span><span class="go">→</span></a></li><li><a href="jasa-kebersihan.html"><span class="no">26</span><span class="tn">Rumah Kinclong<small>Jasa kebersihan</small></span><span class="go">→</span></a></li><li><a href="rental.html"><span class="no">27</span><span class="tn">Jalan Terus<small>Rental kendaraan</small></span><span class="go">→</span></a></li><li><a href="klinik-gigi.html"><span class="no">28</span><span class="tn">Senyum Sehat<small>Klinik gigi</small></span><span class="go">→</span></a></li><li><a href="eyelash.html"><span class="no">29</span><span class="tn">Nay Lash Studio<small>Eyelash</small></span><span class="go">→</span></a></li><li><a href="butik.html"><span class="no">30</span><span class="tn">Butik Rania<small>Butik</small></span><span class="go">→</span></a></li><li><a href="skincare.html"><span class="no">31</span><span class="tn">Glow Kulit<small>Skincare</small></span><span class="go">→</span></a></li><li><a href="perhiasan.html"><span class="no">32</span><span class="tn">Cahaya Emas<small>Perhiasan</small></span><span class="go">→</span></a></li><li><a href="jasa-mua.html"><span class="no">33</span><span class="tn">Mia Make Up Artist<small>Make up artist (MUA)</small></span><span class="go">→</span></a></li><li><a href="apotek.html"><span class="no">34</span><span class="tn">Apotek Sehat Sentosa<small>Apotek</small></span><span class="go">→</span></a></li><li><a href="web-pribadi.html"><span class="no">35</span><span class="tn">Raka Pratama<small>Web pribadi</small></span><span class="go">→</span></a></li></ol>
+ <div style="height:28px"></div>
+ <div class="grid"><a class="item card" href="kopi-senja.html"><div class="ph" aria-hidden="true">☕</div><div class="t"><span class="badge">Kafe</span><h3>Kopi Senja</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="barbershop.html"><div class="ph" aria-hidden="true">✂️</div><div class="t"><span class="badge">Barbershop</span><h3>Pangkas Rapi</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="laundry.html"><div class="ph" aria-hidden="true">🧺</div><div class="t"><span class="badge">Laundry</span><h3>Bersih Wangi</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="toko-kue.html"><div class="ph" aria-hidden="true">🎂</div><div class="t"><span class="badge">Toko kue</span><h3>Manis Rasa</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="bengkel.html"><div class="ph" aria-hidden="true">🛠️</div><div class="t"><span class="badge">Bengkel motor</span><h3>Sigap Motor</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="toko-bunga.html"><div class="ph" aria-hidden="true">💐</div><div class="t"><span class="badge">Toko bunga</span><h3>Bunga Kita</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="warung-makan.html"><div class="ph" aria-hidden="true">🍛</div><div class="t"><span class="badge">Rumah makan</span><h3>Warung Bu Sari</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="salon.html"><div class="ph" aria-hidden="true">💇</div><div class="t"><span class="badge">Salon</span><h3>Cantik Kita</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="studio-foto.html"><div class="ph" aria-hidden="true">📷</div><div class="t"><span class="badge">Studio foto</span><h3>Lensa Kita</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="gym.html"><div class="ph" aria-hidden="true">🏋️</div><div class="t"><span class="badge">Gym dan yoga</span><h3>Kuat Fit</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="kos.html"><div class="ph" aria-hidden="true">🏠</div><div class="t"><span class="badge">Kos-kosan</span><h3>Kos Nyaman</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="katering.html"><div class="ph" aria-hidden="true">🍱</div><div class="t"><span class="badge">Katering</span><h3>Dapur Hangat</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="wedding-foto.html"><div class="ph" aria-hidden="true">💍</div><div class="t"><span class="badge">Fotografer wedding</span><h3>Momen Abadi</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="servis-ac.html"><div class="ph" aria-hidden="true">❄️</div><div class="t"><span class="badge">Servis AC</span><h3>Dingin Jaya</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="pindahan.html"><div class="ph" aria-hidden="true">🚚</div><div class="t"><span class="badge">Jasa pindahan</span><h3>Pindah Mudah</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="toko-bangunan.html"><div class="ph" aria-hidden="true">🧱</div><div class="t"><span class="badge">Toko bangunan</span><h3>Bangun Jaya</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="percetakan.html"><div class="ph" aria-hidden="true">🖨️</div><div class="t"><span class="badge">Percetakan</span><h3>Cetak Cepat</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="toko-kelontong.html"><div class="ph" aria-hidden="true">🛒</div><div class="t"><span class="badge">Toko kelontong</span><h3>Toko Berkah</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="homestay.html"><div class="ph" aria-hidden="true">🛌</div><div class="t"><span class="badge">Homestay</span><h3>Rumah Singgah</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="cuci-mobil.html"><div class="ph" aria-hidden="true">🚗</div><div class="t"><span class="badge">Cuci mobil</span><h3>Kilap Auto</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="toko-hijab.html"><div class="ph" aria-hidden="true">🧕</div><div class="t"><span class="badge">Toko hijab</span><h3>Hijab Anggun</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="toko-ponsel.html"><div class="ph" aria-hidden="true">📱</div><div class="t"><span class="badge">Toko ponsel dan servis HP</span><h3>Sinyal Prima</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="kursus-mengemudi.html"><div class="ph" aria-hidden="true">🚦</div><div class="t"><span class="badge">Kursus mengemudi</span><h3>Aman Jalan</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="kedai-bakso.html"><div class="ph" aria-hidden="true">🍜</div><div class="t"><span class="badge">Kedai bakso</span><h3>Bakso Mantap</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="desain-interior.html"><div class="ph" aria-hidden="true">🛋️</div><div class="t"><span class="badge">Desain interior</span><h3>Ruang Rapi</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="jasa-kebersihan.html"><div class="ph" aria-hidden="true">🧹</div><div class="t"><span class="badge">Jasa kebersihan</span><h3>Rumah Kinclong</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="rental.html"><div class="ph" aria-hidden="true">🚙</div><div class="t"><span class="badge">Rental kendaraan</span><h3>Jalan Terus</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="klinik-gigi.html"><div class="ph" aria-hidden="true">🦷</div><div class="t"><span class="badge">Klinik gigi</span><h3>Senyum Sehat</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="eyelash.html"><div class="ph" aria-hidden="true">👁️</div><div class="t"><span class="badge">Eyelash</span><h3>Nay Lash Studio</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="butik.html"><div class="ph" aria-hidden="true">👗</div><div class="t"><span class="badge">Butik</span><h3>Butik Rania</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="skincare.html"><div class="ph" aria-hidden="true">🧴</div><div class="t"><span class="badge">Skincare</span><h3>Glow Kulit</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="perhiasan.html"><div class="ph" aria-hidden="true">💍</div><div class="t"><span class="badge">Perhiasan</span><h3>Cahaya Emas</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="jasa-mua.html"><div class="ph" aria-hidden="true">💄</div><div class="t"><span class="badge">Make up artist (MUA)</span><h3>Mia Make Up Artist</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="apotek.html"><div class="ph" aria-hidden="true">💊</div><div class="t"><span class="badge">Apotek</span><h3>Apotek Sehat Sentosa</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a><a class="item card" href="web-pribadi.html"><div class="ph" aria-hidden="true">🙋</div><div class="t"><span class="badge">Web pribadi</span><h3>Raka Pratama</h3><p class="sub" style="margin:4px 0 0">Lihat contoh →</p></div></a></div></div></section>
+<section id="cara" style="background:var(--card)"><div class="wrap"><h2>Cara kerja</h2><p class="sub">Simpel, tanpa ribet.</p>
+ <div class="steps"><div><h3>1. Chat</h3><p>Ceritakan usaha dan kebutuhanmu.</p></div><div><h3>2. Kami buatkan</h3><p>Desain dan isi disesuaikan.</p></div><div><h3>3. Revisi</h3><p>Kamu cek, kami rapikan.</p></div><div><h3>4. Online</h3><p>Website siap dipakai.</p></div></div></div></section>
+<section id="hubungi"><div class="wrap"><h2>Mau website untuk usahamu?</h2><p class="sub">Chat dulu aja, kita bahas bareng.</p>
+ <a class="btn btn-wa" href="https://wa.me/6285117324291?text=Halo%20Webjuragan,%20saya%20mau%20bikin%20website" target="_blank" rel="noopener">Chat via WhatsApp</a></div></section>
+<footer><div class="wrap"><h2 style="font-size:26px">Webjuragan</h2><p style="margin:8px 0 14px;opacity:.8">Jasa bikin website untuk usaha</p>
+ <a href="https://wa.me/6285117324291" target="_blank" rel="noopener">WhatsApp</a></div></footer>
+<a class="btn btn-wa fab" href="https://wa.me/6285117324291?text=Halo%20Webjuragan" target="_blank" rel="noopener">Chat WhatsApp</a>
 </body>
 </html>
