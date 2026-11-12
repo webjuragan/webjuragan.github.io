@@ -92,7 +92,7 @@ footer a{margin:0 8px}
    <h1>Kopi Senja</h1>
    <p class="tag">Kopi enak, tempat nyaman, buka sampai malam. Di jantung kota Bandung.</p>
    <div class="cta">
-    <a class="btn btn-wa" href="https://wa.me/628123456789?text=Halo%20Kopi%20Senja%2C%20saya%20mau%20pesan" target="_blank" rel="noopener">Pesan via WhatsApp</a>
+    <a class="btn btn-wa" href="https://wa.me/6285117324291?text=Halo%20Kopi%20Senja%2C%20saya%20mau%20pesan" target="_blank" rel="noopener">Pesan via WhatsApp</a>
     <a class="btn btn-ghost" href="#menu">Lihat menu</a>
    </div>
   </div>
@@ -145,7 +145,7 @@ footer a{margin:0 8px}
   <div><h3>Antar</h3><p>Lewat GoFood, GrabFood, atau ShopeeFood.</p></div>
  </div>
  <p class="sub" style="margin-top:22px">Mau reservasi untuk ulang tahun, meeting, atau acara kecil? Kirim tanggal dan jumlah orang.</p>
- <a class="btn btn-wa" href="https://wa.me/628123456789?text=Halo%2C%20saya%20mau%20reservasi" target="_blank" rel="noopener">Reservasi via WhatsApp</a>
+ <a class="btn btn-wa" href="https://wa.me/6285117324291?text=Halo%2C%20saya%20mau%20reservasi" target="_blank" rel="noopener">Reservasi via WhatsApp</a>
 </div></section>
 
 <section><div class="wrap">
@@ -180,12 +180,18 @@ footer a{margin:0 8px}
   <h2 style="font-size:26px">Kopi Senja</h2>
   <p style="margin:8px 0 14px;opacity:.8">Jl. Contoh No. 12, Bandung</p>
   <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-  <a href="https://wa.me/628123456789" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="https://wa.me/6285117324291" target="_blank" rel="noopener">WhatsApp</a>
  </div>
 </footer>
-<a class="btn btn-wa fab" href="https://wa.me/628123456789?text=Halo%20Kopi%20Senja" target="_blank" rel="noopener">Chat WhatsApp</a>
+<a class="btn btn-wa fab" href="https://wa.me/6285117324291?text=Halo%20Kopi%20Senja" target="_blank" rel="noopener">Chat WhatsApp</a>
 
 <script>
+// GANTI NOMOR WHATSAPP DI SINI (format 628xxxxxxxxxx, tanpa + dan tanpa 0 di depan)
+var WA="6285117324291";
+document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(a){
+ a.href=a.href.replace(/wa\.me\/[^?]*/,"wa.me/"+WA);
+});
+
 var M={
 "Kopi":[["Kopi Susu Senja","Espresso, susu segar","22.000"],["Es Kopi Aren","Gula aren asli","24.000"],["Americano","","18.000"],["Latte","","25.000"]],
 "Non-kopi":[["Matcha Latte","","26.000"],["Cokelat Panas","","24.000"],["Teh Lemon","","16.000"]],
