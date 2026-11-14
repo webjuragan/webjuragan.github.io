@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="ikon-emas.png">
-<script>var w="emas";try{var v=localStorage.getItem("warna");if(v==="biru"||v==="pink"||v==="hijau"||v==="ungu"||v==="emas")w=v}catch(e){}document.documentElement.setAttribute("data-warna",w)</script>
+<script>var w="emas";try{var v=sessionStorage.getItem("warna");if(v==="biru"||v==="pink"||v==="hijau"||v==="ungu"||v==="emas")w=v}catch(e){}document.documentElement.setAttribute("data-warna",w)</script>
 <style>
 :root{--bg:#EEF1EA;--ink:#16302A;--muted:#566860;--card:#FFFFFF;--line:#D3DBD0;--board:#16302A;--boardtext:#F6F3EC;--ac:#E7A524;--acink:#16302A;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#091311;--ink:#EDEDED;--muted:#A5ADAD;--card:#243c37;--line:#3b514c;--board:#0c1a17;color-scheme:dark}}
@@ -221,7 +221,7 @@ footer .mini{opacity:.8;margin:6px 0}
     if(logo)logo.src="logo-"+w+".png";
     var ic=document.querySelector('link[rel="icon"]');if(ic)ic.href="ikon-"+w+".png";
     for(var i=0;i<btns.length;i++)btns[i].setAttribute("aria-pressed",btns[i].getAttribute("data-w")===w?"true":"false");
-    if(simpan){try{localStorage.setItem("warna",w)}catch(e){}}
+    if(simpan){try{sessionStorage.setItem("warna",w)}catch(e){}}
   }
   for(var i=0;i<btns.length;i++)btns[i].addEventListener("click",function(){pasang(this.getAttribute("data-w"),true)});
   pasang(root.getAttribute("data-warna")||"emas",false);
