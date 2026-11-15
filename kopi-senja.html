@@ -82,6 +82,8 @@ details p{margin-top:8px;color:var(--muted)}
 footer{background:var(--board);color:var(--boardtext);padding:30px 0 90px;text-align:center}
 footer a{margin:0 8px}
 .fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:5}
+.vsec{padding:0 0 40px}.vsec h2{text-align:center;margin-bottom:16px}
+.vid{display:block;width:100%;aspect-ratio:16/9;background:#000}
 </style>
 </head>
 <body>
@@ -175,6 +177,10 @@ footer a{margin:0 8px}
  <details><summary>Bisa reservasi?</summary><p>Bisa lewat WhatsApp. Sebutkan tanggal, jam, dan jumlah orang.</p></details>
  <details><summary>Minimal order untuk antar?</summary><p>Minimal Rp50.000 untuk area sekitar kafe.</p></details>
 </div></section>
+
+<section class="vsec"><div class="wrap"><h2>Tonton videonya</h2></div>
+ <video class="vid" controls playsinline preload="metadata" poster="video/kopi-senja-poster.jpg"><source src="video/kopi-senja.mp4" type="video/mp4"></video>
+</section>
 
 <footer>
  <div class="wrap">
