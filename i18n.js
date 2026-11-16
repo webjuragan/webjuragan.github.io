@@ -1,7 +1,7 @@
 /* Web Juragan – bahasa otomatis (ID / EN)
    Urutan penentuan bahasa:
    1. ?lang=en / ?lang=id di URL
-   2. Pilihan manual pengunjung (tombol ID | EN), tersimpan di browser
+   2. Pilihan manual pengunjung (tombol ID | EN), hanya selama tab terbuka
    3. Negara pengunjung (bukan Indonesia -> Inggris)
    4. Jika negara gagal dideteksi: tetap bahasa Indonesia
 */
@@ -104,7 +104,41 @@
     "Desain Profesional": "Professional Design",
     "Pengerjaan Cepat": "Fast Turnaround",
     "Dukungan Support": "Dedicated Support",
-    "Harga Terjangkau": "Affordable Pricing"
+    "Harga Terjangkau": "Affordable Pricing",
+
+    /* nama toko contoh */
+    "Apotek Sehat Sentosa": "Healthy Haven Pharmacy",
+    "Pangkas Rapi": "Neat Cuts",
+    "Sigap Motor": "Swift Motor",
+    "Butik Rania": "Rania Boutique",
+    "Kilap Auto": "Shine Auto",
+    "Ruang Rapi": "Tidy Space",
+    "Kuat Fit": "Strong Fit",
+    "Rumah Singgah": "Stopover House",
+    "Rumah Kinclong": "Sparkling Home",
+    "Dapur Hangat": "Warm Kitchen",
+    "Bakso Mantap": "Mighty Meatballs",
+    "Senyum Sehat": "Healthy Smile",
+    "Kopi Senja": "Sunset Coffee",
+    "Kos Nyaman": "Cozy Stay",
+    "Aman Jalan": "Safe Drive",
+    "Bersih Wangi": "Clean & Fresh",
+    "Cetak Cepat": "Quick Print",
+    "Cahaya Emas": "Golden Glow",
+    "Pindah Mudah": "Easy Move",
+    "Jalan Terus": "Keep Rolling",
+    "Cantik Kita": "Our Beauty",
+    "Dingin Jaya": "Cool Breeze",
+    "Glow Kulit": "Skin Glow",
+    "Lensa Kita": "Our Lens",
+    "Bangun Jaya": "Prime Build",
+    "Bunga Kita": "Our Blooms",
+    "Hijab Anggun": "Elegant Hijab",
+    "Toko Berkah": "Blessed Mart",
+    "Manis Rasa": "Sweet Taste",
+    "Sinyal Prima": "Prime Signal",
+    "Warung Bu Sari": "Sari's Eatery",
+    "Momen Abadi": "Eternal Moments"
   };
 
   /* kalimat awal chat WhatsApp (teks sebelum di-encode) */
@@ -234,7 +268,7 @@
   /* ---------- penyimpanan & deteksi ---------- */
   function load(k, s) { try { return (s ? sessionStorage : localStorage).getItem(k); } catch (e) { return null; } }
   function put(k, v, s) { try { (s ? sessionStorage : localStorage).setItem(k, v); } catch (e) {} }
-  function save(l) { put("wj-lang", l); }
+  function save(l) { put("wj-lang", l, true); } /* sessionStorage: hilang saat tab ditutup */
 
   var GEO = [
     ["https://get.geojs.io/v1/ip/country.json", function (j) { return j && j.country; }],
@@ -275,11 +309,11 @@
     var q = /[?&]lang=(id|en)\b/i.exec(location.search);
     if (q) { var f = q[1].toLowerCase(); save(f); return apply(f); }
 
-    var saved = load("wj-lang");
+    var saved = load("wj-lang", true);
     if (saved === "id" || saved === "en") return apply(saved);
 
     detectCountry(function (cc) {
-      if (load("wj-lang") === "id" || load("wj-lang") === "en") return; /* pengunjung sudah memilih sendiri */
+      if (load("wj-lang", true) === "id" || load("wj-lang", true) === "en") return; /* pengunjung sudah memilih sendiri */
       var lang = cc && cc !== "ID" ? "en" : "id"; /* negara tidak terdeteksi -> tetap Indonesia */
       if (lang !== current) apply(lang);
     });
