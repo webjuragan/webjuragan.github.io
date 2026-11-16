@@ -10,8 +10,6 @@
 <script>var w="emas";try{var v=sessionStorage.getItem("warna");if(v==="biru"||v==="pink"||v==="hijau"||v==="ungu"||v==="emas")w=v}catch(e){}document.documentElement.setAttribute("data-warna",w)</script>
 <style>
 :root{--bg:#EEF1EA;--ink:#16302A;--muted:#566860;--card:#FFFFFF;--line:#D3DBD0;--board:#16302A;--boardtext:#F6F3EC;--ac:#E7A524;--acink:#16302A;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#091311;--ink:#EDEDED;--muted:#A5ADAD;--card:#243c37;--line:#3b514c;--board:#0c1a17;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#091311;--ink:#EDEDED;--muted:#A5ADAD;--card:#243c37;--line:#3b514c;--board:#0c1a17;color-scheme:dark}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
@@ -120,7 +118,6 @@ footer .mini{opacity:.8;margin:6px 0}
 :root[data-warna="pink"]{--tint:#FAD0E6;--ico:#B0145F}
 :root[data-warna="ungu"]{--tint:#E6D3FA;--ico:#7C2FD8}
 :root[data-warna="emas"]{--tint:#F2E4D4;--ico:#A9823C}
-@media (prefers-color-scheme:dark){:root:not([data-warna="biru"]):not([data-warna="pink"]):not([data-warna="ungu"]):not([data-warna="emas"]){--tint:#2f4d45;--ico:#E7A524}}
 .alt{background:linear-gradient(180deg,var(--bg) 0%,var(--tint) 100%)}
 .feat div,.steps div,.item,.promo,details{background:linear-gradient(160deg,var(--card) 0%,var(--tint) 100%)}
 .ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
@@ -214,6 +211,14 @@ footer .mini{opacity:.8;margin:6px 0}
 .intro-atas,.intro-top{display:none}
 :root[data-warna="emas"] .intro-atas{display:block}
 :root[data-warna="emas"] .intro-top{display:block}
+/* EN: dua tombol hero tetap sejajar seperti versi Indonesia */
+html[lang="en"] .hero .cta{flex-wrap:nowrap}
+html[lang="en"] .hero .cta .btn{white-space:nowrap;padding-left:14px;padding-right:14px;font-size:15px;text-align:center}
+/* footer: email · website selalu satu baris */
+footer .kontak{white-space:nowrap;font-size:min(16px,4vw)}
+footer .kontak a{margin:0 4px}
+/* EN: kutipan atas — ukuran huruf tetap, jarak antarhuruf dirapatkan sedikit agar "website" tidak sendirian */
+html[lang="en"] .intro-atas{letter-spacing:-.015em}
 </style>
 </head>
 <body>
@@ -226,7 +231,7 @@ footer .mini{opacity:.8;margin:6px 0}
   <button type="button" data-w="pink" aria-label="Warna pink" aria-pressed="false" style="--c:linear-gradient(135deg,#7A0F4E 50%,#FF3C94 50%)"></button>
  </div></div></div>
 <header class="hero"><div class="wrap">
- <div><p class="intro-atas">“Kami percaya bahwa setiap pelaku usaha kecil berhak untuk tampil profesional dan bersaing di era digital tanpa harus terbebani biaya mahal. Karena itulah Web Juragan hadir membantu menyederhanakan proses digitalisasi bisnis Anda melalui website profesional yang praktis”</p><h1>Bikin Website <br class="brhp">untuk <em>Bisnis</em> Anda</h1><p class="tag">Jasa bikin website untuk usaha anda. Rapi, enak dibuka di HP, dan pesanan masuk lewat WhatsApp.</p>
+ <div><p class="intro-atas">“Kami percaya bahwa setiap pelaku usaha kecil berhak untuk tampil profesional dan bersaing di era digital tanpa harus terbebani biaya mahal. Karena itulah Web Juragan hadir membantu menyederhanakan proses digitalisasi bisnis Anda melalui website profesional yang praktis”</p><h1 data-i18n-html="h1">Bikin Website <br class="brhp">untuk <em>Bisnis</em> Anda</h1><p class="tag">Jasa bikin website untuk usaha anda. Rapi, enak dibuka di HP, dan pesanan masuk lewat WhatsApp.</p>
  <div class="cta"><a class="btn btn-wa" href="https://wa.me/6285117324291?text=Halo%20Web%20Juragan,%20saya%20mau%20tanya%20soal%20bikin%20website" target="_blank" rel="noopener">Chat via WhatsApp</a><a class="btn btn-ghost" href="contoh.html">Lihat contoh</a></div></div>
  <div class="board" aria-label="Isi halaman"><h3>Daftar isi</h3><ul>
   <li><span><a href="contoh.html">Contoh website</a></span><i class="dots"></i><b>1</b></li>
@@ -254,7 +259,7 @@ footer .mini{opacity:.8;margin:6px 0}
 <section id="hubungi"><div class="wrap"><h2>Mau website untuk usahamu?</h2><p class="sub">Chat dulu aja, kita bahas bareng.</p>
  <a class="btn btn-wa" href="https://wa.me/6285117324291?text=Halo%20Web%20Juragan,%20saya%20mau%20bikin%20website" target="_blank" rel="noopener">Chat via WhatsApp</a></div></section>
 <footer><div class="wrap"><h2 style="font-size:26px">Web Juragan</h2><p class="mini">Your Business, Our Priority</p>
- <p class="mini"><a href="mailto:webjuragan11@gmail.com">webjuragan11@gmail.com</a> · <a href="https://webjuragan.my.id">webjuragan.my.id</a></p>
+ <p class="mini kontak"><a href="mailto:webjuragan11@gmail.com">webjuragan11@gmail.com</a> · <a href="https://webjuragan.my.id">webjuragan.my.id</a></p>
  <p style="margin:12px 0"><a href="https://wa.me/6285117324291" target="_blank" rel="noopener">WhatsApp</a></p>
  <p class="mini" style="font-size:13px">© 2026 Web Juragan. All Rights Reserved.</p></div></footer>
 <a class="btn btn-wa fab" href="https://wa.me/6285117324291?text=Halo%20Web%20Juragan" target="_blank" rel="noopener">Chat WhatsApp</a>
@@ -272,5 +277,6 @@ footer .mini{opacity:.8;margin:6px 0}
   pasang(root.getAttribute("data-warna")||"emas",false);
 })();
 </script>
+<script src="i18n.js?v=2" defer></script>
 </body>
 </html>

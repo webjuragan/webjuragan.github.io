@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-alt="butik.en.html">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -8,8 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#F8F4F2;--ink:#1E2A4A;--muted:#66708A;--card:#FFFFFF;--line:#E4DFE0;--board:#1E2A4A;--boardtext:#F6F3EC;--ac:#F3C9C0;--acink:#3B1D1A;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c111e;--ink:#EDEDED;--muted:#A5ADAD;--card:#2c3755;--line:#424c67;--board:#101729;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0c111e;--ink:#EDEDED;--muted:#A5ADAD;--card:#2c3755;--line:#424c67;--board:#101729;color-scheme:dark}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
@@ -100,5 +98,6 @@ Object.keys(M).forEach(function(k,i){
  x.onclick=function(){show(k)};tabs.appendChild(x);if(i===0)show(k);
 });
 </script>
+<script src="i18n.js?v=2" defer></script>
 </body>
 </html>

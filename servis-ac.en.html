@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-alt="servis-ac.html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dingin Jaya – AC Service in Bandung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EDF2FC;--ink:#0F2257;--muted:#4F5F8A;--card:#FFFFFF;--line:#D2DBF0;--board:#1B3A8A;--boardtext:#F6F3EC;--ac:#9ED0FF;--acink:#0F2257;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+h2{font-size:clamp(26px,6vw,36px);margin-bottom:6px}
+p{margin:0}a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+section{padding:44px 0}
+.sub{color:var(--muted);margin-bottom:22px;max-width:52ch}
+.btn{display:inline-block;padding:13px 20px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent}
+.btn-wa{background:var(--ac);color:var(--acink)}
+.btn-ghost{border-color:currentColor}
+:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+.back{background:var(--board);color:var(--boardtext);font-size:14px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.back a{text-decoration:none;opacity:.85}
+.hero{background:var(--board);color:var(--boardtext);padding:36px 0 40px}
+.hero .wrap{display:grid;gap:28px}
+.hero h1{font-size:clamp(44px,13vw,84px);font-weight:800}
+.hero .tag{margin:12px 0 22px;max-width:34ch;opacity:.85}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.board{border:2px dashed rgba(246,243,236,.35);border-radius:10px;padding:18px 18px 8px}
+.board h3{font-size:20px;margin-bottom:12px}
+.board ul{list-style:none;margin:0;padding:0}
+.board li{display:flex;align-items:baseline;gap:8px;padding:7px 0}
+.board .dots{flex:1;border-bottom:2px dotted rgba(246,243,236,.35);transform:translateY(-4px)}
+.board b{color:var(--ac)}
+@media(min-width:760px){.hero .wrap{grid-template-columns:1.2fr 1fr;align-items:center}}
+.info{display:grid;gap:12px;background:var(--ac);color:var(--acink);padding:14px 20px;font-weight:500;text-align:center}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.item{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.ph{aspect-ratio:4/3;display:grid;place-items:center;font-size:44px;background:linear-gradient(135deg,var(--line),var(--ac));color:#222}
+.item .t{padding:12px 14px 14px}.item h3{font-size:18px}
+.price{font-weight:700;margin-top:4px}
+.badge{display:inline-block;font-size:12px;font-weight:700;background:var(--ac);color:var(--acink);border-radius:6px;padding:1px 8px;margin-bottom:6px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;margin-bottom:10px}
+.tabs button{flex:none;font:inherit;font-weight:700;padding:9px 16px;border-radius:999px;border:2px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.menu{list-style:none;margin:0;padding:0}
+.menu li{display:flex;align-items:baseline;gap:8px;padding:11px 0;border-bottom:1px solid var(--line)}
+.menu .n{flex:1}.menu small{display:block;color:var(--muted)}
+.fas{display:flex;flex-wrap:wrap;gap:8px}
+.fas span{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 14px;font-size:14px}
+.steps{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.steps div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.steps h3{font-size:18px;margin-bottom:4px}
+.loc{display:grid;gap:18px}
+@media(min-width:760px){.loc{grid-template-columns:1fr 1fr}}
+.jam{list-style:none;margin:10px 0 0;padding:0}
+.jam li{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line)}
+.map{aspect-ratio:16/9;border-radius:14px;border:1px dashed var(--muted);display:grid;place-items:center;color:var(--muted);text-align:center;padding:12px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:8px}
+summary{font-weight:700;cursor:pointer}details p{margin-top:8px;color:var(--muted)}
+footer{background:var(--board);color:var(--boardtext);padding:30px 0 90px;text-align:center}
+footer a{margin:0 8px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:5}
+</style>
+</head>
+<body>
+<div class="back"><div class="wrap"><a href="contoh.html">← Back to Web Juragan examples</a></div></div>
+<header class="hero"><div class="wrap">
+ <div><h1>Dingin Jaya</h1><p class="tag">AC cleaning, freon refill, and repair. Our technician comes to your home.</p>
+  <div class="cta"><a class="btn btn-wa" href="https://wa.me/6285117324291?text=Hello%20Dingin%20Jaya,%20I%27d%20like%20to%20ask%20a%20question" target="_blank" rel="noopener">Book via WhatsApp</a><a class="btn btn-ghost" href="#harga">See price list</a></div></div>
+ <div class="board" aria-label="Top services"><h3>Top services</h3><ul><li><span>AC Cleaning</span><i class="dots"></i><b>Rp75,000</b></li><li><span>Freon Refill</span><i class="dots"></i><b>Rp150,000</b></li><li><span>Repair</span><i class="dots"></i><b>Rp100,000</b></li><li><span>AC Installation</span><i class="dots"></i><b>Rp250,000</b></li></ul></div>
+</div></header>
+<div class="info"><span>Mon–Sat, 08:00–18:00</span><span>Jl. Contoh No. 12, Bandung</span></div>
+<section><div class="wrap"><h2>Favorite services</h2><p class="sub">What customers choose most often.</p><div class="grid"><article class="item"><div class="ph" role="img" aria-label="Sample photo, replace with your own photo">🧽</div><div class="t"><span class="badge">Favorite</span><h3>AC Cleaning</h3><p class="price">Rp75,000</p></div></article><article class="item"><div class="ph" role="img" aria-label="Sample photo, replace with your own photo">💨</div><div class="t"><span class="badge">Favorite</span><h3>Freon Refill</h3><p class="price">Rp150,000</p></div></article><article class="item"><div class="ph" role="img" aria-label="Sample photo, replace with your own photo">🔧</div><div class="t"><h3>Repair</h3><p class="price">Rp100,000</p></div></article><article class="item"><div class="ph" role="img" aria-label="Sample photo, replace with your own photo">🛠️</div><div class="t"><h3>AC Installation</h3><p class="price">Rp250,000</p></div></article></div></div></section>
+<section id="harga" style="background:var(--card)"><div class="wrap"><h2>Price list</h2><p class="sub">Prices may change at any time.</p>
+ <div class="tabs" role="tablist" id="tabs"></div><ul class="menu" id="list" role="tabpanel"></ul></div></section>
+<section><div class="wrap"><h2>Why choose us</h2><p class="sub">Comfortable and trustworthy.</p><div class="fas"><span>Technician comes to your home</span><span>Clear prices</span><span>Service warranty</span><span>Book via WhatsApp</span><span>Neat and clean</span></div></div></section>
+<section style="background:var(--card)"><div class="wrap"><h2>How to order</h2><p class="sub">Easy, just chat.</p><div class="steps"><div><h3>Chat</h3><p>Tell us your AC type and the problem.</p></div><div><h3>Technician arrives</h3><p>We check and let you know the cost.</p></div><div><h3>Done</h3><p>Pay after it's fixed.</p></div></div>
+ <p style="margin-top:22px"><a class="btn btn-wa" href="https://wa.me/6285117324291?text=Hello%20Dingin%20Jaya,%20I%27d%20like%20to%20place%20an%20order" target="_blank" rel="noopener">Book a service</a></p></div></section>
+<section id="lokasi"><div class="wrap loc"><div><h2>Location &amp; opening hours</h2><p class="sub" style="margin-bottom:6px">Jl. Contoh No. 12, Bandung. Serving Bandung and surroundings.</p><ul class="jam"><li><span>Mon–Sat</span><b>08.00–18.00</b></li><li><span>Sunday</span><b>Closed</b></li></ul></div>
+ <div class="map">Paste your map embed here</div></div></section>
+<section style="background:var(--card)"><div class="wrap"><h2>Frequently asked questions</h2><p class="sub"></p><details><summary>Does the technician come to my home?</summary><p>Yes, for the Bandung area.</p></details><details><summary>How long does AC cleaning take?</summary><p>About 30–45 minutes per unit.</p></details><details><summary>Is there a warranty?</summary><p>There's a 7-day service warranty.</p></details></div></section>
+<footer><div class="wrap"><h2 style="font-size:26px">Dingin Jaya</h2><p style="margin:8px 0 14px;opacity:.8">Jl. Contoh No. 12, Bandung</p>
+ <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/6285117324291" target="_blank" rel="noopener">WhatsApp</a>
+ <p style="margin-top:18px;font-size:13px;opacity:.6">Sample design by Web Juragan</p></div></footer>
+<a class="btn btn-wa fab" href="https://wa.me/6285117324291?text=Hello%20Dingin%20Jaya,%20I%27d%20like%20to%20ask%20a%20question" target="_blank" rel="noopener">Chat on WhatsApp</a>
+<script>
+var M={"Wash": [["0.5–1 PK AC", "", "Rp75,000"], ["1.5–2 PK AC", "", "Rp100,000"]], "Freon": [["R32 Freon Refill", "", "Rp150,000"], ["R410 Freon Refill", "", "Rp250,000"]], "Other": [["Repair", "Starting from", "Rp100,000"], ["Uninstall & Install", "", "Rp250,000"], ["Damage Check", "Free if you proceed with service", "Rp0"]]};
+var tabs=document.getElementById("tabs"),list=document.getElementById("list");
+function show(k){
+ Array.prototype.forEach.call(tabs.children,function(x){x.setAttribute("aria-selected",x.textContent===k)});
+ list.innerHTML=M[k].map(function(r){return '<li><div class="n">'+r[0]+(r[1]?'<small>'+r[1]+'</small>':'')+'</div><b>'+r[2]+'</b></li>'}).join("");
+}
+Object.keys(M).forEach(function(k,i){
+ var x=document.createElement("button");x.type="button";x.setAttribute("role","tab");x.textContent=k;
+ x.onclick=function(){show(k)};tabs.appendChild(x);if(i===0)show(k);
+});
+</script>
+<script src="i18n.js?v=2" defer></script>
+</body>
+</html>

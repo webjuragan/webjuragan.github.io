@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-alt="kopi-senja.en.html">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -9,8 +9,6 @@
 <style>
 :root{--bg:#EEF1EA;--ink:#16302A;--muted:#566860;--card:#fff;--line:#D3DBD0;--board:#16302A;--boardtext:#F1EFE4;--gold:#E7A524;--goldink:#16302A;
 color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1916;--ink:#E8EEE7;--muted:#9AAFA5;--card:#17251F;--line:#29393A;--board:#0A1210;--boardtext:#F1EFE4;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0F1916;--ink:#E8EEE7;--muted:#9AAFA5;--card:#17251F;--line:#29393A;--board:#0A1210;--boardtext:#F1EFE4;color-scheme:dark}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
@@ -178,8 +176,13 @@ footer a{margin:0 8px}
  <details><summary>Minimal order untuk antar?</summary><p>Minimal Rp50.000 untuk area sekitar kafe.</p></details>
 </div></section>
 
-<section class="vsec"><div class="wrap"><h2>Tonton videonya</h2></div>
- <video class="vid" controls playsinline preload="metadata" poster="kopi-senja-poster.jpg"><source src="kopi-senja.mp4" type="video/mp4"></video>
+<section class="vsec">
+<div class="wrap">
+<h2>Tonton videonya</h2>
+</div>
+ <video class="vid" controls playsinline preload="metadata" poster="video/kopi-senja-poster.jpg">
+<source src="video/kopi-senja.mp4" type="video/mp4">
+</video>
 </section>
 
 <footer>
@@ -216,5 +219,6 @@ Object.keys(M).forEach(function(k,i){
  b.onclick=function(){show(k)};tabs.appendChild(b);if(i===0)show(k);
 });
 </script>
+<script src="i18n.js?v=2" defer></script>
 </body>
 </html>
