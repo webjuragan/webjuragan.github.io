@@ -82,9 +82,9 @@
 
     /* harga */
     "Harga Pembuatan Website": "Website Development Price",
-    "Rp1.800.000": "$450",
-    "Rp650.000": "$150",
-    "64% OFF": "67% OFF",
+    "Rp5.000.000": "$500",
+    "Rp2,5 Juta": "$250",
+    "50% OFF": "50% OFF",
     "Promo berlaku hingga 31 Desember 2026.": "Promo valid until December 31, 2026.",
     "Dapatkan website bisnis profesional dengan harga spesial!": "Get a professional business website at a special price!",
     "Ambil promo via WhatsApp": "Claim promo via WhatsApp",
@@ -146,7 +146,7 @@
     "Halo Web Juragan": "Hello Web Juragan",
     "Halo Web Juragan, saya mau tanya soal bikin website": "Hello Web Juragan, I'd like to ask about getting a website built",
     "Halo Web Juragan, saya mau bikin website": "Hello Web Juragan, I'd like to get a website built",
-    "Halo Web Juragan, saya mau ambil promo website Rp650.000": "Hello Web Juragan, I'd like to claim the $150 website promo"
+    "Halo Web Juragan, saya mau ambil promo website Rp2,5 Juta": "Hello Web Juragan, I'd like to claim the $250 website promo"
   };
 
   /* elemen dengan HTML campur (ditandai data-i18n-html="kunci") */
